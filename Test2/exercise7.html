@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <script type="text/javascript">
+        
+           function calendar() {
+            var newDate = new Date();
+            var month = newDate.getMonth();
+            var year = newDate.getFullYear();
+            var dd = newDate.getDate();
+            // console.log("Day" +" " + dd);
+
+            var month_name = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+            document.getElementById("month").innerHTML = month_name[month] + "" + year;
+
+
+            document.getElementById("id_"+dd).style.backgroundColor = "green";
+            document.getElementById("id_"+dd).style.color = "black";
+       
+
+            document.getElementById("head").style.backgroundColor = "black";
+            document.getElementById("head").style.color= "white";
+
+            document.getElementById("t_body").style.width = "100%";
+            document.getElementById("t_body").style.margin  = "10px 400px"
+            document.getElementById("week").style.backgroundColor = "grey";
+            document.getElementById("banner").style.backgroundColor = "grey";
+            document.getElementById("banner_1").style.backgroundColor = "grey";
+            document.getElementById("banner_2").style.backgroundColor = "grey";
+            document.getElementById("banner_3").style.backgroundColor = "grey";
+            document.getElementById("banner_4").style.backgroundColor = "grey";
+   
+           }
+    </script>
+</head>
+<body onload="calendar()" id="t_body">
+    <div id="cal">
+        <table border="1" cellpadding="20">
+            <thead id="head">
+                <tr>
+                    <th colspan="7" id="month"></th>
+                </tr>
+            </thead>
+            <thead>
+                <tr id="week">
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            </thead>
+            <tbody class="body">
+                <tr id="banner">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="id_1">1 Oct</td>
+                    <td id="id_2">2</td>
+                    <td id="id_3">3</td>
+                </tr>
+                <tr id="banner_1">
+                    <td id="id_4">4</td>
+                    <td id="id_5">5</td>
+                    <td id="id_6">6</td>
+                    <td id="id_7">7</td>
+                    <td id="id_8">8</td>
+                    <td id="id_9">9</td>
+                    <td id="id_10">10</td>
+                </tr>
+                <tr id="banner_2">
+                    <td id="id_11">11</td>
+                    <td id="id_12">12</td>
+                    <td id="id_13">13</td>
+                    <td id="id_14">14</td>
+                    <td id="id_15">15</td>
+                    <td id="id_16">16</td>
+                    <td id="id_17">17</td>
+                </tr>
+                <tr id="banner_3">
+                    <td id="id_18">18</td>
+                    <td id="id_19">19</td>
+                    <td id="id_20">20</td>
+                    <td id="id_21">21</td>
+                    <td id="id_22">22</td>
+                    <td id="id_23">23</td>
+                    <td id="id_24">24</td>
+                </tr>
+                <tr id="banner_4">
+                    <td id="id_25">25</td>
+                    <td id="id_26">26</td>
+                    <td id="id_27">27</td>
+                    <td id="id_28">28</td>
+                    <td id="id_29">29</td>
+                    <td id="id_30">30</td>
+                    <td id="id_31">31</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

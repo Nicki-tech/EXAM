@@ -1,0 +1,51 @@
+Exercise-1
+	SELECT staffs.name as STAFF_NAME FROM `staffs`
+Exercise-2
+	SELECT DISTINCT department_id FROM staffs
+Exercise-3
+	SELECT * FROM `staffs` ORDER BY name ASC
+
+Exercise-4
+	SELECT * FROM `staffs` ORDER BY name ASC,department_id DESC
+
+Exercise-5
+	SELECT * FROM `staffs` WHERE name IN("Kay Thwe","Thae Su WAI")
+
+Exercise-6
+	SELECT * FROM staffs INNER JOIN department ON staffs.id = department.id  WHERE department.name = "Admin"
+
+Exercise-7
+	SELECT * FROM `staffs` WHERE name LIKE "a%"
+
+Exercise-8
+	SELECT * FROM `staffs` WHERE name LIKE "%e"
+
+Exercise-9
+	SELECT * FROM `staffs` WHERE salary BETWEEN 100000 AND 500000
+
+Erercise-10
+	SELECT * FROM staffs WHERE `joindate`="2014-02"
+Exercise-11
+	SELECT COUNT(DISTINCT name)FROM department WHERE name="Admin"
+
+Exercise-12
+	SELECT * FROM `department` WHERE name="Manager"
+
+Exercise-13
+	SELECT * FROM `staffs` LIMIT 5
+
+Exercise-14
+	SELECT salary FROM staffs LIMIT 3
+
+Exercise-15
+	SELECT SUM(salary) as totalsalaries FROM staffs
+
+Exercise-16
+	SELECT * FROM `staffs` INNER JOIN `bonus` ON staffs.id = bonus.id WHERE bonus.bonusdate = "2016-02"
+Exercise-17
+	SELECT * FROM `staffs` INNER JOIN `bonus` ON staffs.id = bonus.id WHERE staffs.name = "Aye Aye" OR bonus.bonusdate = "2016"
+
+
+
+
+
